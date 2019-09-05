@@ -1,2 +1,50 @@
-/**/
+body{
+  margin: 0vw;
+  padding: 0;
+  background-image: linear-gradient(black,white);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  font-family: sans-serif;
+}
 
+h1{
+  text-transform: uppercase;
+  color: lightgrey;
+  text-align: center;
+}
+
+.local{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 30vw;
+  height: 5vh;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.local button{
+  background: transparent;
+  border: 2px solid lightsteelblue;
+  border-radius: 15px;
+  width: 30vw;
+  height: 5vh;
+  color: lightgray;
+}
+
+.local::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150px;
+  width: 100px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-30deg);
+  transition: 0.4s;
+}
+
+.local:hover::before{
+  left: 250px;
+}
